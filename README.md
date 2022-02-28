@@ -14,7 +14,8 @@ Para correr este programa es necesario tener docker instalado en tu maquina junt
 <br><br>
 
 ```
-PASO 2: Ejecutar este comando para la creacion del 3 contenedor: sudo docker run -it --name ubuntu_sh --network network2 ubuntu bash
+PASO 2: Ejecutar este comando para la creacion del 3 contenedor: 
+COMANDO: sudo docker run -it --name ubuntu_sh --network network2 ubuntu bash
 NOTA: Si ya esta añadido docker al grupo sudo, el sudo en comando no sera necesario.
 ```
 
