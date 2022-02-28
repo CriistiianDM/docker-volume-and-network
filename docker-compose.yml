@@ -1,0 +1,75 @@
+#version de docker compose
+version: "3.7"
+
+#services
+services:
+
+#crear una red de internet llamado network1
+  
+  data_base:
+     image: postgres:14.2
+     container_name: data_base
+     restart: always
+     environment:
+        - POSTGRES_PASSWORD=sebasK@48
+        - POSTGRES_DB=materias
+     ports:
+        - "4780:5432"
+     volumes:
+        - ./postgres/:/var/lib/postgresql/data
+     networks:
+         backend_network:
+                  aliases:
+                      - network1_backend
+
+
+#crear una aplicacion web con express
+
+  web_app:
+       container_name: web_app
+       restart: always
+       build:
+          context: ./
+          dockerfile: ./express-web/Dockerfile
+       ports:
+         - "3500:4500"
+       networks:
+          backend_network:
+                     aliases:
+                        - network1_backend
+          fronten_network:
+                     aliases:
+                        - network2_frontend
+       depends_on:
+         - data_base
+
+
+#crear alpine /bin/sh
+
+#  alpine_sh:
+#       image: alpine
+#       container_name: alpine_sh
+#       restart: always
+#       networks:
+#          fronten_network:
+#                 aliases:
+#                    - network2_frontend
+#       depends_on:
+#         - web_app
+
+
+
+# configuracion de la red de internet
+networks:
+       # red internet 1
+       backend_network:
+            name: network1
+            driver: bridge
+            ipam:
+               driver: default
+      # red internet 2
+       fronten_network:
+            name: network2
+            driver: bridge
+            ipam:
+               driver: default
