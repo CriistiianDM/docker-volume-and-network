@@ -17,9 +17,9 @@ NOTA: Si ya esta añadido docker al grupo sudo, el sudo en comando no sera neces
 
 
 #TECNOLOGIAS USADAS:
-*EXPRESS -> NODE
-*POSTGRESQL -> POSTGRES
-*UBUNTU --> UBUNTU
-*DOCKER --> DOCKER
+* EXPRESS -> NODE
+* POSTGRESQL -> POSTGRES
+* UBUNTU --> UBUNTU
+* DOCKER --> DOCKER
 <br><br>
 Se uso express para conectar la base de datos que esta alojada en el contenedor que tiene la base de datos, para respresentarla en consola o atreves de la web localhost:3500, se uso ubuntu para ser el interprete de los comandos, por ultimo se uso la postgresql para modelar la base de datos. todas estas tecnologias alejodas en distintos comtenedores con docker.
