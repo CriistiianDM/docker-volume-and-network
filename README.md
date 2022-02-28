@@ -16,7 +16,7 @@ NOTA: Si ya esta añadido docker al grupo sudo, el sudo en comando no sera neces
 ``
 
 
-#TECNOLOGIAS USADAS:
+# TECNOLOGIAS USADAS:
 * EXPRESS -> NODE
 * POSTGRESQL -> POSTGRES
 * UBUNTU --> UBUNTU
