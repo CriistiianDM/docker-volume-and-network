@@ -5,15 +5,17 @@ Para correr este programa es necesario tener docker instalado en tu maquina junt
 
 
 
-``
-   PASO 1: En el directorio que contiene el docker-compose.yml, ejecutar el siguiente comando sudo docker-compose up &    
+```
+   PASO 1: En el directorio que contiene el docker-compose.yml, ejecutar el siguiente comando sudo docker-compose up & 
+   
    NOTA: Si ya esta añadido docker al grupo sudo, el sudo en comando no sera necesario. docker compose crea las 2 network donde estara contectado los contenedores
-``
+```
 <br><br>
-``
+
+```
 PASO 2: Ejecutar este comando para la creacion del 3 contenedor: sudo docker run -it --name ubuntu_sh --network network2 ubuntu bash
 NOTA: Si ya esta añadido docker al grupo sudo, el sudo en comando no sera necesario.
-``
+```
 
 
 # TECNOLOGIAS USADAS:
